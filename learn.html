@@ -2,94 +2,22 @@
   <head>
     <script type="text/javascript" src="learn.js"></script>
     <style>
-      .donut {
-        height: 100px;
-        width: 100px;
-        border-radius: 50%;
-        border: 50px solid brown;
-      }
-      .centering-horizontally {
-        height: 100px;
-        width: 500px;
-        background-color: yellow;
-        margin: auto; /* to center div at center horizontally */
-        display: block; /* to center div at center horizontally */
-        text-align: center; /* to center text inside div at center no need of display property to use only text align */
-        color: red;
-        border: 2px solid green;
-      }
-      .centering-vertically {
-        height: 200px;
-        width: 200px;
-        color: white;
-        background-color: blue;
-        line-height: 200px;
-      }
-      p {
-        display: inline-block;
-        line-height: normal;
-        vertical-align: middle;
-      }
-      .centering-flex {
-        height: 50%;
-        width: 60%;
-        background-color: black;
-        color: beige;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: 7px solid green;
-        /* padding:2%; */
-        margin-top: 2%;
-        flex-direction: column;
-      }
-      .position-center {
-        height: 300px;
-        width: 800px;
-        border: 3px solid black;
-        transform: translate(-50%, -50%);
-        position: relative;
-        top: 50%;
-        left: 50%;
-      }
-      .triangle {
-        height:0;
-        width:0;
-        border-left: 50px solid transparent;
-        border-right: 50px solid transparent;
-        border-bottom: 50px solid black;
-      }
+     .heading{
+       color:brown;
+       display: block;
+       margin: auto;
+       text-align: center;
+       font-size: 100px;
+       font-weight: bold;
+       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     }
     </style>
   </head>
   <body>
     <!-- <div>Learning Javascript</div> -->
     <html>
       <body>
-        <div class="donut"></div>
-        <div class="centering-horizontally">Divya Mishra 
-            
-        </div>
-        <div class="centering-flex">
-          <h3>Flex properties</h3>
-          <div>
-          If we are using flex as display property 
-          we can't use text-align in that case we have justify-content property,
-           which works same(align text inside div center horizontally) and 
-           align-item property (which keeps inside div things in center vertically)</div>
-        </div>
-        <div class="centering-vertically">
-        <p> to align vertically without flex we can use line-height same as height
-          but only for signle line .. if we have multiple lines we have to give these three properise
-          (display:inline-block, line-height:normal, vertical-align:middle)
-        </p>
-        </div>
-        <div class="position-center">
-          absolute- relative to dom sets top bottom left right
-          relative- relative to its actual position sets top bottom left right
-          transform- propertise(transform, scale, rotate, skew, initial, inherit)
-        </div>
-        <div class="triangle"></div>
-      
+        <div class="heading">Practice Javascript</div>
       </body>
     </html>
   </body>

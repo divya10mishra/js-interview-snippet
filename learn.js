@@ -945,9 +945,9 @@
 
 
 // call by value -- Primitive types(Number,String,null,undefined,Symbol,boolean)
-let a = 'shiyaa';
-let b = a;
-b = 'reena';
+// let a = 'shiyaa';
+// let b = a;
+// b = 'reena';
 // console.log(a,"-original");
 // console.log(b, "-copied");
 
@@ -970,12 +970,29 @@ b = 'reena';
 // console.log(obj1, '-original');
 // console.log(obj2, '-copied');
 
-const a = {
-  name:"divya"
-}
-a.age=25;
-console.log(a.age)
-
+// function(){
+//   //... 
+// }
+// let a = setTimeout(()=>{
+//   console.log("first")
+//  },0)
+//  let b = setTimeout(()=>{
+//  console.log("second")
+//  },1000)
+//  let c = setTimeout(() => {
+//    console.log("third with await")
+//  }, 4000)
+//  let d = setTimeout(()=>{
+//  console.log("forth after await")
+//  },3000)
+ 
+// async function abc(){
+//   console.log(a)
+//   console.log(b)
+//  await console.log(c)
+//   console.log(d)
+// }
+//   abc()
 
 
 

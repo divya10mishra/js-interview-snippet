@@ -3,7 +3,7 @@
  const a=10;
  const b=20;
  Number.prototype.sum= function(...args){
- return args.reduce((acc,current)=>{
+ args.reduce((acc,current)=>{
  return acc + current;
 },this)
 } 
@@ -44,3 +44,34 @@ function sumDigits(n)
 }
 
 var sum = sumDigits(1235231);
+
+
+// snippet-4   --  frequency of each character
+
+function frequency(str){
+    let str1 = str.toLowerCase();
+    let arr = str1.split('');
+    
+    for(let i = 0;i<arr.length;i++){
+      let count = 0;
+      for(let j=0;j<arr.length;j++){
+        if(arr[i]==arr[j] && i>j)
+          break;
+        
+        else if(arr[i]==arr[j])
+          count++;
+      }
+      if(count>0)
+       console.log(count+arr[i])
+    }
+   }
+frequency("Elements") // e3 l1 m1 n1 t1 s1
+frequency("weerty") // w1 e2 r1 t1 y1 
+
+
+// snippet-5   --  longest string with total length
+
+function longestString(){
+
+}
+longestString(abcddgft)// abcd-4
