@@ -36,11 +36,15 @@ console.log(findPath(obj, 'a.k')); //null
 
 // snippet-3
 
+
 function sumDigits(n)
 {
-   
-    
-    return sum;
+  let sum = 0;
+   while(n){
+     sum += n%10;
+     n = Math.floor(n/10)
+   }
+  console.log("Sum of digits in a number ",sum)
 }
 
 var sum = sumDigits(1235231);
