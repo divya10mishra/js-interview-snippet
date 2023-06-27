@@ -989,22 +989,178 @@
 // async function abc(){
 //   console.log(a)
 //   console.log(b)
-//  await console.log(c)
+// //  await console.log(c)
 //   console.log(d)
 // }
 //   abc()
 
 
+// function myPromise(){
+//   let promise = new Promise((resolve,reject)=>{
+//     setTimeout(()=>{
+//      console.log("setTimeout")
+//      resolve()
+//     },2000)
+//     setTimeout(()=>{
+//       console.log("setTimeout rejected")
+//       reject()
+//      },1000)
+//    })
+//    promise.then(()=>{console.log("then")})
+//    promise.catch(()=>{console.log("catch")})
+
+//    return promise
+// }
+
+// myPromise()
+
+// function wait () {
+  
+//    return res
+// }
+
+// // function waitr (){
+ 
+// // }
+// async function myAsync () {
+//   const res =  new Promise((resolve,reject)=>{
+//     setTimeout((()=>{
+//      resolve('2 sec')
+//       //console.log("sixth")
+//      }),2000)
+//    })
+  
+   
+//    const result = new Promise((resolve,reject)=>{
+//      resolve("third")
+//      // console.log("third")
+//    })
+   
+//   console.log("first")
+//   const one = await res
+//   console.log(one)
+//   console.log("after 2sec")
+//   const two = await result
+//   console.log(two)
+//   console.log("end")
+// }
+// myAsync()
+//  console.log("second")
 
 
+// const myPromise = () => Promise.resolve('I have resolved!');
+ 
+// function firstFunction() {
+//   myPromise().then(res => console.log(res));
+//   console.log('second');
+// }
+ 
+// async function secondFunction() {
+//   console.log(await myPromise());
+//   console.log('second');
+// }
+ 
+// //firstFunction();
+// secondFunction();
+// const nums = [1,2,3,4]
+// var runningSum = function(nums) {
+//   let n = nums.length
+//   // console.log(n,"n")
+//   let arr = [n]
+//   nums[0]=arr[0]
+//   for(let i = 1; i < nums.length; i++){    
+//           arr[i]=nums[i] + nums[i-1]
+//           // console.log(arr[i],"arr[i")
+//   }
+//  console.log(arr)
+// };
 
 
+// runningSum(nums)
 
 
+// constructor function
+
+// function Car(name){
+//   this.name = name 
+// }
+// let obj = {
+//   name:'divya'
+// }
+
+// let taxi = new Car(obj)
+// console.log(taxi)
+
+// function Counter(){
+// 	let count = 10
+//  this.increment = function (){
+// 	 count++
+// 	console.log(count)
+// }
+//  this.decrement = function (){
+// 	 count--
+// 	console.log(count)
+// }
+
+// }
+
+// let counter1 = new Counter()
+// counter1.increment()
+// counter1.decrement()
+
+// function number (){
+//     for(var i = 0; i<=5; i++){
+//       function close(i){
+//       setTimeout(function(){
+//         console.log(i)
+//       },i* 1000)
+//     }
+//      close(i) 
+//     } 
+// }
+
+// number()
 
 
+function validatePhone(phone) {
+  var re = /^(\+\d{1,2}\s?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/
+  return re.test(phone);
+}
+let userInput=2345;
+let isValidPhone=validatePhone(userInput);
+console.log(isValidPhone)
+// $('#phone').on('keyup', function(){
+// 	let userInput=$(this).val();
+// 	let isValidPhone=validatePhone(userInput);
+// 	if(isValidPhone) {
+// 		//hide message code here
+// 		$(this).parent().find('div:eq(0)').text('');
+// 		//fire ajax from here and validate if exists
+// 		$.ajax({
+// 			type:'post',
+// 			url: '',
+// 			data: JSON.stringify({}),
+// 			success: function(response) {
+// 				console.log('response: ', response)
+// 			},
+// 			error: function(error) {
+// 				console.log('error: ', error)
+// 			}
+// 		})
+// 	} else {
+// 		//show message code here
+// 		$(this).parent().find('div:eq(0)').text('Invalid Phone Number').css('color','red')
+// 	}
+// })
 
 
+function fact(num){
+  let product = 1;
+  while(num>1){
+    console.log(product)
+    product = num*fact(num-1)
+  }
+  return product
+}
 
-
-
+console.log(fact(5))

@@ -23,6 +23,19 @@ var obj = {
 };
 
 function findPath(obj,str){
+  let arr = ['[','.',']']
+  let key = []
+  if(str.length>0){
+    for(let i=0;i<str.length;i++){
+      if(!arr.includes(str[i])){
+        key.push(atr[i])
+      }
+    }
+    let value = key.reduce((obj,curr)=>{
+      return obj[curr]
+    },obj)
+  }
+
  }
 console.log(findPath(obj, 'a.b.c')); // 12
 console.log(findPath(obj, 'a.b')); // {c: 12, j: false}
@@ -78,4 +91,100 @@ frequency("weerty") // w1 e2 r1 t1 y1
 function longestString(){
 
 }
-longestString(abcddgft)// abcd-4
+longestString('abcddgft')// abcd-4
+
+// snippet-6 -- sorted array
+
+let arr = [9,67,-0,-100,55]
+let ab = arr.sort((x,y)=>{
+ return x-y
+})
+console.log(ab)
+
+// snippet -7 --factorial
+
+function fact(num){
+ if(x==0){
+   return 1
+ }else{
+   return n*fact(n-1)
+ }
+ 
+}
+
+console.log(fact(5))
+
+
+// snippet-8 -- fibonacci
+
+function fibo(n){
+  let arr = [0,1]
+  let c = 0
+  for(let i=2;i<n;i++){
+    arr[i] = arr[i-1]+arr[i-2]
+  }
+  return arr
+}
+
+console.log(fibo(5))
+
+// snippet-9 chopped array
+
+function chopped(arr,len){
+   let arr1 = []
+   let i =0
+   while(i<arr.length){
+     arr1.push(arr.slice(i,i+len))
+     i+len
+   }
+   return arr1
+}
+
+console.log(chopped([6,7,9,8],2))
+
+// snippet-10 chaining method
+
+function chain(){
+  let temp = {
+     total = 0,
+      crore : function(n){
+         return this.total += n*Math.pow(10,7)    
+  },
+   lac: function(n){
+     return this.total += n*Math.pow(10,5)
+   }
+    
+
+  }
+}
+
+chain(temp().crore(7).lac(8).thousand(7).crore(8).value())
+
+//snippet-11 -- length of longest string
+
+function longestString(s){
+  if(!s){
+    return 0
+  }
+
+  //sliding window
+  let start = 0;
+  let end = 0;
+  let maxlength = 0;
+  let unique = new Set()
+  
+  while(end<s.length){
+    if(!unique.has(s[end])){
+      unique.add(s[end])
+      end++
+      maxlength = Math.max(maxlength, unique.size)
+    } else {
+      unique.delete(s[start])
+      start++
+    }
+  }
+
+  return maxlength
+}
+
+console.log(longestString('abcabcbb'))
