@@ -20,16 +20,31 @@ function createOrder(cartItems) {
     }, 5000);
   });
 }
-function makePayment(orderId) {
+async function makePayment(orderId) {
+  let msg = "";
   if (Object.keys(orderId).length > 0) {
-    console.log("Payment Successful");
+    msg = "Payment Successful";
   } else {
-    console.log("Payment Unsuccessful");
+    msg = "Payment Unsuccessful";
+  }
+  console.log(msg, "msg");
+  return msg;
+}
+
+function updateWallet(msg) {
+  if (msg === "Payment Successful") {
+    console.log(`you are less with 70`);
   }
 }
 
 createOrder(cartItems)
   .then((result) => {
-    makePayment(result);
+    return makePayment(result);
   })
-  .catch((err) => console.error);
+  .then((result) => {
+    updateWallet(result);
+  })
+  .catch((err) => {
+    console.error(err);
+  })
+
