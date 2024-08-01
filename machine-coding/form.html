@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='server.js'></script>
+</head>
+
+<body>
+    <form id="calculate">
+        <input type="number" id="input1" value="" />
+        <input type="number" id="input2" value="" />
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        document.getElementById("calculate").addEventListener("submit", (event) => {
+            event.preventDefault()
+            let input1 = document.getElementById("input1").value
+            let input2 = document.getElementById("input2").value
+            console.log(input1, input2, "inputs")
+        })
+    
+    </script>
+</body>
+
+
+</html> 
