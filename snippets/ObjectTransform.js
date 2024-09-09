@@ -56,7 +56,47 @@ transform(data)
 
 
 
+//output:
 
+
+{
+  Maths: [
+    { name: 'Zalice', grade: 20 },
+    { name: 'Bob', grade: 20 },
+    { name: 'Megha', grade: 20 }
+  ],
+  English: [
+    { name: 'Zalice', grade: 50 },
+    { name: 'Bob', grade: 50 },
+    { name: 'Megha', grade: 50 }
+  ],
+  History: [
+    { name: 'Zalice', grade: 78 },
+    { name: 'Bob', grade: 78 },
+    { name: 'Megha', grade: 78 }
+  ]
+} result
+
+
+{
+  Maths: [
+    { name: 'Bob', grade: 20 },
+    { name: 'Megha', grade: 20 },
+    { name: 'Zalice', grade: 20 }
+  ],
+  English: [
+    { name: 'Bob', grade: 50 },
+    { name: 'Megha', grade: 50 },
+    { name: 'Zalice', grade: 50 }
+  ],
+  History: [
+    { name: 'Bob', grade: 78 },
+    { name: 'Megha', grade: 78 },
+    { name: 'Zalice', grade: 78 }
+  ]
+} sorted
+
+=== Session Ended. Please Run the code again ===
 
 
 
